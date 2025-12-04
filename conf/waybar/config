@@ -1,0 +1,131 @@
+{
+    "layer": "bot",
+    "spacing": 0,
+    "height": 0,
+    "margin-bottom": 0,
+    "margin-top": 5,
+    "position": "top",
+    "margin-right": 5,
+    "margin-left": 5,
+    "modules-left": [
+      "custom/powermenu",
+      "dwl/tags",
+      "sway/workspaces",
+      "tray"
+      
+    ],
+    "modules-center": [
+      "custom/applauncher",
+      "custom/nemo",
+      "clock"
+    
+    ],
+    "modules-right": [
+      "network",
+      "cpu",
+      "memory",
+      "battery",
+      "pulseaudio"
+      
+      
+    ],
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": false,
+      "tooltip": false
+    },
+    "sway/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "tooltip": true
+    },
+    "custom/applauncher": {
+      "format": " ☰ ",
+      "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top",
+      "tooltip": false
+    },
+
+    "custom/powermenu": {
+      "format": " ➜] ",
+      "on-click": "exec /home/ryan/.config/rofi/powermenu.sh",
+      "tooltip": false
+    },
+
+"custom/nemo": {
+      "format": " 🗁 ",
+      "on-click": "pgrep nemo >/dev/null 2>&1 && killall nemo || nemo",
+      "tooltip": false
+    },
+
+"cpu": {
+    "tooltip": true,
+    "interval": 10,
+    "format": "🎛️: {usage}%",
+    "format-icons": ["fa-microchip", "fa-microchip"],
+    "states": {
+        "10": true,
+        "50": true,
+        "90": true
+    }
+},
+
+"memory": {
+  "tooltip": false,
+	"interval": 30,
+	"format": "🎟: {used:0.1f}G/{total:0.1f}G "
+},
+
+
+"dwl/tags": {
+  "num-tags": 4,
+  "tag-labels": [ " 1 ", " 2 ", " 3 ", " 4 " ],
+  "disable-click": false
+},
+
+    "tray": {
+      "spacing": 10,
+      "tooltip": false
+    },
+    "clock": {
+      "format": "🕰️ {:%H:%M %a %b %d}",
+      "tooltip": false
+    },
+    "network": {
+      "format-wifi": "📤 {bandwidthDownBits}",
+      "format-ethernet": "📥 {bandwidthDownBits}",
+      "format-disconnected": "No Network",
+      "interval": 5,
+      "tooltip": false
+    },
+    "pulseaudio": {
+      "scroll-step": 5,
+      "max-volume": 150,
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} {volume}%",
+      "format-icons": [
+        "VOL 🔈",
+        "VOL 🔉",
+        "VOL 🔊"
+      ],
+      "nospacing": 1,
+      "format-muted": "🔇",
+      "on-click": "pgrep pavucontrol >/dev/null 2>&1 && killall pavucontrol || pavucontrol",
+      "tooltip": true
+    },
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-charging": "🗲 ███░░ {capacity}%",
+      "format-plugged": "🗲 {capacity}%",
+      "format-alt": "{icon} {time}",
+      "format-full": "100% ✅ {capacity}%",
+      "format-icons": [
+        "⚠️",
+        "⚠️",
+        "⚠️"
+      ]
+    }
+  }

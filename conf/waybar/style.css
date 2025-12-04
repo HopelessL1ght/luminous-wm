@@ -1,0 +1,283 @@
+* {
+  font-family: Consolas;
+  border-radius: 30;
+  font-size: 16px;
+  font-style: italic; /* Set to italic */
+  padding: 2px;
+  background: transparent;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 20px;
+  border-style: none;
+}
+
+
+#custom-nemo,
+#custom-powermenu,
+#cpu,
+#memory,
+#tags button,
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-color: #040A2A; /* #1a1a25 */
+  margin: 4px;
+  margin-right: 2px;
+  padding: 2px 8px;
+  border-radius: 30px;
+  color: #dec6c0; /* #cccccf */
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#pulseaudio:hover {
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#cpu{
+  background-color: #040A2A; /* #1a1a25 */
+  color: #dec6c0; /* #cccccf */
+  margin: 4px;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+  padding: 2px 8px;
+  border-radius: 30px;
+}
+
+#cpu:hover{
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#cpu.state-10 {
+  color: #5C696B; /* #a3be8c -> Green */
+}
+
+#cpu.state-50 {
+  color: #C85A5C; /* #ebcb8b -> Yellow */
+}
+
+#cpu.state-90 {
+  color: #50676C; /* #bf616a -> Red */
+}
+
+
+
+#memory {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #dec6c0; /* #cccccf */
+  margin: 4px;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+  padding: 2px 8px;
+  border-radius: 30px;
+}
+
+#memory:hover{
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+ 
+}
+
+#network {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #dec6c0; /* #cccccf */
+  margin: 4px;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+  padding: 2px 8px;
+  border-radius: 30px;
+}
+
+#network:hover{
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+
+}
+
+#clock {
+  background-color: #040A2A; /* #1a1a25 */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#clock:hover{
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#tags button {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #dec6c0; /* #cccccf */
+  padding: 2px 2px;
+  margin-right: 6px;
+  
+}
+
+#tags button.occupied {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #6F827D; /* #837E8B -> Accent color */
+  
+}
+
+#tags button.focused {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #6F827D; /* #837E8B -> Accent color */
+}
+
+#tags button.urgent {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #50676C; /* #E49186 -> Red/Urgent color */
+}
+
+
+
+#custom-applauncher {
+  font-weight: bold;
+  padding: 2px 8px;
+  background-color: #040A2A; /* #1a1a25 */
+  margin-right: 6px;
+  transition-duration: 120ms;
+}
+#custom-applauncher:hover {
+  background-image: linear-gradient(to bottom, #707D81 100%); /* #75778B -> Mapped to a strong accent color */
+  color: #dec6c0; /* #cccccf */
+  transition-duration: 120ms;
+}
+
+#custom-powermenu {
+  font-weight: bold;
+  padding: 2px 2px;
+  background-color: #040A2A; /* #1a1a25 */
+  margin-right: 6px;
+  transition-duration: 120ms;
+}
+#custom-powermenu:hover {
+  background-image: linear-gradient(to bottom, #707D81 100%); /* #75778B -> Mapped to a strong accent color */
+  color: #dec6c0; /* #cccccf */
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #040A2A; /* #1a1a25 */
+  color: #dec6c0; /* #cccccf */
+  margin: 4px;
+  margin-right: 2px;
+  padding: 2px 8px;
+  border-radius: 30px;
+}
+
+#tray menu:hover {
+  background-color: #dec6c0; /* #1a1a25 -> Mapped to light background for hover effect */
+  transition-duration: 100ms;
+  all: initial;
+  font-weight: bold;
+  min-width: 0;
+  color: #040A2A; /* Inverted color */
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+
+#custom-nemo {
+  font-weight: bold;
+  padding: 2px 8px;
+  background-color: #040A2A; /* #1a1a25 */
+  margin-right: 6px;
+  transition-duration: 120ms;
+}
+#custom-nemo:hover {
+  background-image: linear-gradient(to bottom, #707D81 100%); /* #75778B -> Mapped to a strong accent color */
+  color: #dec6c0; /* #cccccf */
+  transition-duration: 120ms;
+}
+
+#tray menu menuitem {
+  background-color: #040A2A; /* #1a1a25 */
+  font-weight: bold;
+  font-size: 16;
+  margin: 5px;
+  color: #dec6c0; /* #cccccf */
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #040A2A; /* #0A0A0D -> Mapped to border color */
+}
+
+
+#workspaces button {
+  padding: 10px 10px;
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #dec6c0; /* #cccccf */
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #dec6c0; /* #8B8A8D -> Mapped to light gray for hover */
+}
+#workspaces button.focused {
+  color: #6F827D; /* #7D8094 -> Mapped to accent color */
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #dec6c0; /* #cccccf */
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #9b8a86; /* #595866 -> Mapped to dark gray */
+}
+
+#battery {
+  background-color: #dec6c0; /* #6E6D71 -> Mapped to light gray */
+  color: #9b8a86; /* #595866 -> Mapped to dark gray */
+}
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #9b8a86; /* #595866 -> Mapped to dark gray */
+  background-color: #50676C; /* #595866 -> Mapped to Red/Urgent color */
+}
+

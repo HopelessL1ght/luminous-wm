@@ -1,0 +1,12 @@
+* {
+    bg-col:         #040A2A;
+    bg-col-light:   #dec6c0;
+    border-col:     #040A2A;
+    selected-col:   #5C696B;
+    blue:           #6F827D;
+    fg-col:         #dec6c0;
+    fg-col2:        #6F827D;
+    grey:           #dec6c0;
+    width:          600;
+    font:           "Consolas Italic 16"; /* Set to italic Consolas */
+}
